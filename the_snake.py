@@ -72,6 +72,7 @@ class GameObject:
         pg.draw.rect(screen, color, rect)
         pg.draw.rect(screen, border_color, rect, 1)
 
+
 class Apple(GameObject):
     """Представить яблоко на игровом поле."""
 
@@ -172,8 +173,6 @@ def handle_keys(game_object):
             if game_object.direction != opposite:
                 game_object.next_direction = new_direction
 
-
-
 def main():
     """Запустить основной игровой цикл."""
     pg.init()
@@ -200,7 +199,6 @@ def main():
             snake.draw()
             apple.draw()
             pg.display.update()
-
 
         elif snake.get_head_position() in snake.positions[4:]:
 
