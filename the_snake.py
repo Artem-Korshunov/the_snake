@@ -59,11 +59,7 @@ class GameObject:
         """Отрисовать игровой объект."""
         pass
 
-    def draw_cell(self,
-        position,
-        color=None,
-        border_color=LIGHT_BLUE,
-    ):
+    def draw_cell(self, position, color=None, border_color=LIGHT_BLUE):
         """Отрисовать клетку в указанной позиции."""
         if color is None:
             color = self.body_color
@@ -172,6 +168,7 @@ def handle_keys(game_object):
 
             if game_object.direction != opposite:
                 game_object.next_direction = new_direction
+
 
 def main():
     """Запустить основной игровой цикл."""
